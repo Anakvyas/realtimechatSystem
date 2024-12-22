@@ -50,7 +50,7 @@ This project is a **Real-Time Chat Application** built using the **MERN Stack** 
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/yourusername/chat-application.git
+   git clone https://github.com/Anakvyas/realtimechatSystem.git
    cd chat-application
 
 2. Set up the backend:
