@@ -21,7 +21,7 @@ const message = require('./models/message.js')
 connectDB();
 
 const sessions = {
-        secret: 'REALTIMECHATSYSTEM',
+        secret: process.env.secretcode,
         resave: false,
         saveUninitialized: true,
         cookie: {
