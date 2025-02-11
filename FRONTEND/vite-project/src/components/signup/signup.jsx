@@ -1,5 +1,6 @@
 import React ,{useState} from 'react';
 import {useNavigate} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import axios from 'axios'
 import './signup.css'
@@ -83,7 +84,7 @@ const Signup = () => {
             <button type="submit" className="btn btn-dark" >Sign in</button>
         </form>
         <br></br>
-        Have a account ? <a href='/login'>Login</a>
+        Have a account ? <Link to="/login">Login</Link>
        </div>
     );
 }
