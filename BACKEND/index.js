@@ -40,11 +40,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(session(sessions));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(cors({
-    origin: 'http://localhost:5173',
-    methods: ['GET', 'POST'],
-    credentials: true,
-}));
+
+app.use(cors({ origin: 'https://realtimechat-system.onrender.com'}));
 
 passport.use(new LocalStrategy(User.authenticate()))
 passport.serializeUser(User.serializeUser())
@@ -55,10 +52,13 @@ let allusers = {};
 // for socket --------------------------------------------------
 const io = socketIo(server, {
     cors: {
-      origin: 'http://localhost:5173',
+      origin: 'https://realtimechat-system.onrender.com',
       methods: ['GET', 'POST'],
     }
   });
+
+
+
   
     io.on('connection',(socket)=>{
     console.log('user connected' + socket.id);
